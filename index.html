@@ -3,162 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Conor Griffin - Portfolio</title>
+    <title>Conor Griffin — Developer</title>
     <link rel="stylesheet" href="cv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--Nav bar -->
-    <nav>
-    <!--maybe put pro photo here -->
-        
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">CG<span class="dot">.</span></span>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">◐</span>
+            </button>
+        </div>
     </nav>
 
-    <header>
-        <div class="header-content">
-            <h1>Hi, I'm Conor Griffin</h1>
-            <p>B.Sc in Computing Student Seeking Internship | Application Development Enthusiast</p>
-            <a href="#contact" class="btn">Contact Me</a>
+    <!-- HERO -->
+    <header id="hero">
+        <div class="hero-inner">
+            <div class="hero-tag"><span class="mono">Final Year</span> · NCI Dublin · Graduating 2026</div>
+            <h1 class="hero-name">Conor<br><em>Griffin</em></h1>
+            <p class="hero-sub">QA Engineer &amp; Software Developer — building things because it's interesting, not because it's required.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">See my work</a>
+                <a href="#contact" class="btn-ghost">Get in touch</a>
+            </div>
+        </div>
+        <div class="hero-deco" aria-hidden="true">
+            <div class="deco-grid"></div>
+            <div class="deco-circle c1"></div>
+            <div class="deco-circle c2"></div>
         </div>
     </header>
 
-    <section id="about" class="section about">
+    <!-- ABOUT -->
+    <section id="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I am a motivated and detail-oriented 3rd-year Computer Science student at the National College of Ireland (NCI) with strong skills in programming and software development. I’m looking for an internship opportunity to apply my technical skills, develop new competencies, and contribute to meaningful projects.</p>
-        </div>
-    </section>
-
-    <section id="education" class="section education">
-        <div class="container">
-            <h2>Education</h2>
-            <p><strong>B.Sc in Computing</strong><br>National College of Ireland, Dublin (Sept 2022 - Present, Expected graduation 2026)</p>
-            <ul>
-                <li>Computer Architecture</li>
-                <li>Databases and Data Modelling (SQL)</li>
-                <li>Digital Multimedia</li>
-                <li>Operating Systems</li>
-                <li>Object-oriented & Advanced Programming (Java)</li>
-                <li>Web Design & Application Development</li>
-                <li>Data Structures & Algorithms</li>
-                <li>Software Engineering</li>
-                <li>Software Quality & Testing</li>
-                <li>Advanced Computer Networks</li>
-                <li>Artificial Intelligence & Machine Learning</li>
-                <li>Security Fundamentals & Development</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-box">
-                    <h3>Programming Languages</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;">Java</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 70%;">JavaScript</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;">Python</div>
-                    </div>
+            <div class="section-label mono">/ about</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>I build things outside of what's asked.</h2>
+                    <p>Final-year B.Sc. Computing student at NCI with hands-on professional experience as a QA Engineer on a live national-scale platform. I write automation, validate APIs, and ship code in agile teams — but outside of work I'm building a roguelike dungeon crawler in Python and an API fuzzer born from real frustration with manual negative testing.</p>
+                    <p>I use AI tools every day to move faster and think better. TypeScript, Java, and Python are where I'm most comfortable. I'm looking for a role where what I build actually matters.</p>
                 </div>
-                <div class="skill-box">
-                    <h3>Web Development</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;">HTML</div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">8<span class="stat-unit">mo</span></span>
+                        <span class="stat-label">Professional QA internship</span>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;">CSS</div>
+                    <div class="stat">
+                        <span class="stat-num">4<span class="stat-unit">+</span></span>
+                        <span class="stat-label">Projects shipped</span>
                     </div>
-                </div>
-                <div class="skill-box">
-                    <h3>Databases</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;">SQL</div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h3>Tools & Platforms</h3>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;">Git</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;">Visual Studio Code</div>
+                    <div class="stat">
+                        <span class="stat-num">3<span class="stat-unit">+</span></span>
+                        <span class="stat-label">Languages daily</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section projects">
+    <!-- PROJECTS -->
+    <section id="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <div class="section-label mono">/ projects</div>
+            <h2 class="section-title">What I've built</h2>
+
+            <!-- ScriptDojo — featured -->
+            <div class="project-featured" data-modal="scriptdojo">
+                <div class="project-featured-content">
+                    <div class="project-tag">Personal · Featured</div>
+                    <h3>ScriptDojo</h3>
+                    <p>A Google Docs-style collaborative IDE for Java in the browser. Multiple users write, compile, and run code simultaneously — with live cursors, real-time syntax analysis, and execution output broadcast to every participant.</p>
+                    <div class="tech-stack">
+                        <span>React</span><span>Spring Boot</span><span>WebSockets</span><span>ANTLR v4</span><span>Docker</span><span>MySQL</span>
+                    </div>
+                    <button class="btn-outline" onclick="openModal('scriptdojo')">View details →</button>
+                </div>
+                <div class="project-featured-visual" aria-hidden="true">
+                    <div class="code-window">
+                        <div class="code-titlebar"><span></span><span></span><span></span></div>
+                        <div class="code-body">
+                            <div class="code-line"><span class="kw">public class</span> <span class="cls">Main</span> {</div>
+                            <div class="code-line indent"><span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {</div>
+                            <div class="code-line indent2"><span class="cls">System</span>.out.<span class="fn">println</span>(<span class="str">"Hello, world"</span>);</div>
+                            <div class="code-line indent">}</div>
+                            <div class="code-line">}</div>
+                            <div class="code-cursor">|</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other projects grid -->
             <div class="project-grid">
-                <div class="project" onclick="openModal('vitality-vault')">
-                    <div class="project-front">
-                        <h3>Vitality Vault</h3>
-                        <!--<p>A mock fitness app designed for users to track their daily calorie and macronutrient intake.</p>-->
+
+                <div class="project-card" onclick="openModal('hollow-descent')">
+                    <div class="project-card-top">
+                        <div class="project-tag">Personal · Active</div>
+                        <div class="project-status active">In Development</div>
+                    </div>
+                    <h3>The Hollow Descent</h3>
+                    <p>A dark fantasy roguelike dungeon crawler. Procedurally generated 10-floor dungeon, turn-based combat, tile-based rendering, and permanent death. A young man descends into the underground in search of his missing father.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>Pygame</span><span>pytest</span><span>OOP / ECS</span>
                     </div>
                 </div>
-                <div class="project" onclick="openModal('munch-mob')">
-                    <div class="project-front">
-                        <h3>Munch Mob</h3>
-                        <!--<p>A mock food delivery service website incorporating a basket system.</p>-->
+
+                <div class="project-card" onclick="openModal('chaos-monkey')">
+                    <div class="project-card-top">
+                        <div class="project-tag">Personal · Early Stage</div>
+                        <div class="project-status research">Research Phase</div>
+                    </div>
+                    <h3>QA Chaos Monkey</h3>
+                    <p>An automated REST API fuzzer that hammers endpoints with malformed, boundary-busting, and unexpected inputs — then logs everything that breaks. Born from real frustration with manual negative testing.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>REST APIs</span><span>pytest</span>
                     </div>
                 </div>
-                <div class="project" onclick="openModal('Urban-&-Co-Barbers')">
-                    <div class="project-front">
-                        <h3>Urban & Co Barbers</h3>
-                        <!--<p>A website is was compensated for building and running, built to just display the services and items available in store.</p>-->
+
+                <div class="project-card" onclick="openModal('myagfood')">
+                    <div class="project-card-top">
+                        <div class="project-tag">Professional · Live</div>
+                        <div class="project-status live">Production</div>
+                    </div>
+                    <h3>MyAgFood</h3>
+                    <p>National agricultural platform serving Irish farmers — animal tracking, nitrates management, land administration. Built by DAFM in partnership with Version 1. I owned the QA automation layer.</p>
+                    <div class="tech-stack">
+                        <span>Playwright</span><span>TypeScript</span><span>RESTassured</span><span>Angular</span><span>Java</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section experience">
+    <!-- EXPERIENCE -->
+    <section id="experience">
         <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <h3>Lead Counter-Staff</h3>
-                    <p>Wun Loy Chinese Takeaway, Ballymun (March 2018 - Present)<br>
-                    Managed customer orders and collaborated with kitchen staff to improve customer satisfaction.</p>
+            <div class="section-label mono">/ experience</div>
+            <h2 class="section-title">Where I've worked</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <span class="timeline-date mono">Jan 2025 – Aug 2025</span>
+                        <span class="timeline-badge">8 months</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>QA Engineer <span class="at">@</span> DAFM — Version 1</h3>
+                        <p class="timeline-sub">MyAgFood Project · IMT Schemes, Land &amp; Digital Services</p>
+                        <ul>
+                            <li>Designed and maintained the full Playwright (TypeScript) automation suite across a consumer-facing national platform.</li>
+                            <li>Validated REST APIs using RESTassured (Java), covering correctness and regression across multiple integrated teams.</li>
+                            <li>Managed an external UAT team — scoping tests, communicating plans, and consolidating feedback for engineers.</li>
+                            <li>Created Xray test cases traceable from requirements through to defect reports; raised and tracked all bugs in Jira.</li>
+                            <li>Shipped across two-week Agile sprints: stand-ups, planning, refinement, retrospectives, and deployments.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-label mono">/ skills</div>
+            <h2 class="section-title">What I work with</h2>
+            <div class="skills-layout">
+                <div class="skill-group">
+                    <h4>Languages</h4>
+                    <div class="skill-chips">
+                        <span>TypeScript</span><span>JavaScript</span><span>Java</span><span>Python</span><span>SQL</span><span>HTML / CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Frameworks &amp; Libraries</h4>
+                    <div class="skill-chips">
+                        <span>React</span><span>Next.js</span><span>Spring Boot</span><span>Playwright</span><span>RESTassured</span><span>Pygame</span><span>pytest</span><span>Angular</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Tools &amp; Platforms</h4>
+                    <div class="skill-chips">
+                        <span>Git / GitHub / GitLab</span><span>Docker</span><span>Jira</span><span>Confluence</span><span>Xray</span><span>Postman</span><span>CI/CD</span><span>WebSockets</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4>Practices</h4>
+                    <div class="skill-chips">
+                        <span>Agile / Scrum</span><span>Test Strategy</span><span>API Validation</span><span>UAT Management</span><span>OOP / ECS</span><span>Procedural Generation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <div class="container">
+            <div class="section-label mono">/ education</div>
+            <div class="edu-card">
+                <div class="edu-left">
+                    <h3>B.Sc. in Computing</h3>
+                    <p class="edu-school">National College of Ireland, Dublin</p>
+                    <p class="edu-date mono">Sept 2022 – May 2026</p>
+                </div>
+                <div class="edu-right">
+                    <h4>Relevant Modules</h4>
+                    <div class="skill-chips small">
+                        <span>Software Quality &amp; Testing</span>
+                        <span>Advanced Programming (Java)</span>
+                        <span>OOP (Java)</span>
+                        <span>Data Structures &amp; Algorithms</span>
+                        <span>Web Design &amp; App Development</span>
+                        <span>AI &amp; Machine Learning (Python)</span>
+                        <span>Software Engineering</span>
+                        <span>Databases &amp; Data Modelling</span>
+                        <span>Security Fundamentals</span>
+                        <span>Advanced Computer Networks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
     <footer id="contact">
         <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:Conorgriffin222@gmail.com">Conorgriffin222@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/conorgriffin222/">linkedin.com/in/conorgriffin222</a></p>
-            
+            <div class="contact-inner">
+                <div class="contact-left">
+                    <h2>Let's talk.</h2>
+                    <p>Open to grad roles, internships, and interesting projects. Based in Dublin — happy to chat.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:Conorgriffin222@gmail.com" class="contact-item">
+                        <span class="mono">01</span>
+                        <span>Conorgriffin222@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/conorgriffin222/" target="_blank" rel="noopener" class="contact-item">
+                        <span class="mono">02</span>
+                        <span>linkedin.com/in/conorgriffin222</span>
+                    </a>
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="contact-item">
+                        <span class="mono">03</span>
+                        <span>GitHub ↗</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="mono">© 2026 Conor Griffin</span>
+            </div>
         </div>
     </footer>
 
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-            <h4>Tech Stack:</h4>
-            <p id="modal-tech-stack"></p>
+    <!-- MODALS -->
+    <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modal-body"></div>
         </div>
     </div>
 
